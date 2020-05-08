@@ -1,0 +1,2 @@
+# jinjinvim
+custom ./vimrc setup

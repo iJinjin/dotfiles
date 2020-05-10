@@ -1,4 +1,8 @@
-set nocompatible
+" Jinjin's custom vimrc setup
+" version controlled just for my own convenience
+" but I'll leave it public for anyone else to use it
+
+set nocompatible                       " vim functionality
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,7 +21,8 @@ call vundle#end()
 filetype plugin indent on
 
 " Custom settings
-" set autoindent
+
+set shortmess+=I       " disable default Vim startup message
 
 set enc=utf-8          " set UTF-8 encoding
 set fenc=utf-8
@@ -26,23 +31,33 @@ set termencoding=utf-8
 set autoindent         " use indentation of previous line
 set smartindent        " intelligent indentation for C
 
-set backspace=indent,eol,start
+set backspace=indent,eol,start  " reasonable backspace behavior
 set hidden
-set incsearch
 set ruler
 
 set tabstop=4          " 4 spaces per tab
 set shiftwidth=4       " indent with 4 spaces
 set expandtab          " expand tabs to spaces
-set textwidth=120      " lines longer than 90 characters broken
+set textwidth=120      " lines longer than 120 characters broken
 
 set t_Co=256           " syntax highlighting on
 syntax on
 
 set number             " turn on line numbers
+set relativenumber     " relative line numbering
+
+set ignorecase         " disable case-sensitive searching by default
+set smartcase          " enable case-sensitive searching on command
+set incsearch          " enable searching while typing
+
 set showmatch          " highlight matching braces
 
-set laststatus=2       " for proper plugin functioning
+set laststatus=2       " for proper plugin functioning/show status line at bottom
+
+set mouse+=a           " enable mouse support
+
+" disable Ex mode
+nmap Q <Nop>
 
 colo molokai           " use the molokai theme
 syntax on 

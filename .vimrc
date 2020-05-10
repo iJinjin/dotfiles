@@ -16,6 +16,9 @@ Plugin 'terryma/vim-multiple-cursors'  " multiple cursor plugin
 Plugin 'preservim/nerdtree'            " file exploration plugin
 Plugin 'ycm-core/YouCompleteMe'        " autocompletion plugin
 Plugin 'cohama/lexima.vim'             " parenthesis autofill plugin
+Plugin 'ctrlpvim/ctrlp.vim'            " fuzzy search plugin
+Plugin 'vim-syntastic/syntastic'       " lint-like syntax checker plugin
+Plugin 'tpope/vim-fugitive'            " git plugin
 
 call vundle#end()
 filetype plugin indent on

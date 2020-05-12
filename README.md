@@ -1,4 +1,4 @@
-# jinjinvim
-custom ./vimrc setup
+# Dotfiles
+This repo was created to keep my system settings intact.  
+I may slowly work on some scripts to facilitate managing my dotfiles.  
 
-requires vim vundle plugin

@@ -42,6 +42,7 @@ set tabstop=4          " 4 spaces per tab
 set shiftwidth=4       " indent with 4 spaces
 set expandtab          " expand tabs to spaces
 set textwidth=120      " lines longer than 120 characters broken
+set scrolloff=7        " 7 line window for scrolls
 
 set t_Co=256           " syntax highlighting on
 syntax on

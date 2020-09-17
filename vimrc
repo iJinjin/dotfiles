@@ -23,6 +23,14 @@ Plugin 'tpope/vim-fugitive'            " git plugin
 call vundle#end()
 filetype plugin indent on
 
+" for vim cursor change in windows terminal
+if &term =~ '^xterm'
+    " normal mode
+    let &t_EI .= "\<Esc>[0 q"
+    " insert mode
+    let &t_SI .= "\<Esc>[6 q"
+endif
+
 " Custom settings
 
 set shortmess+=I       " disable default Vim startup message

@@ -60,6 +60,13 @@ set laststatus=2       " for proper plugin functioning/show status line at botto
 
 set mouse+=a           " enable mouse support
 
+" used for kite
+set completeopt+=menuone
+set completeopt+=noinsert
+set completeopt-=longest
+set belloff+=ctrlg
+
+
 " disable Ex mode
 nmap Q <Nop>
 

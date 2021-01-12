@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'itchyny/lightline.vim'         " status line plugin
 Plugin 'tomasr/molokai'                " molokai theme
-Plugin 'terryma/vim-multiple-cursors'  " multiple cursor plugin
+Plugin 'mg979/vim-visual-multi'        " Multiline vim plugin
 Plugin 'preservim/nerdtree'            " file exploration plugin
 Plugin 'ycm-core/YouCompleteMe'        " autocompletion plugin
 Plugin 'cohama/lexima.vim'             " parenthesis autofill plugin
@@ -93,3 +93,5 @@ let g:lightline = {
 let g:molokai_original = 1
 
 let g:ycm_clangd_binary_path = "/usr/bin/clangd-10"
+
+let g:kite_supported_languages = ['*']

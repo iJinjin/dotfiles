@@ -8,7 +8,10 @@ DIR=~/dotfiles                  # dotfiles directory
 DIR_BACKUP=~/dotfiles_backup     # backup dotfiles directory
 
 # list of files to symlink
-files="vimrc bashrc bash_aliases"            
+files="vimrc 
+       bashrc 
+       bash_aliases
+       zshrc"            
 
 # create a backup directory for old dotfiles if not present
 if [ ! -d "$DIR_BACKUP" ]; then

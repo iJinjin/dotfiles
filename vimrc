@@ -1,6 +1,6 @@
 " Jinjin's custom vimrc setup
 " version controlled just for my own convenience
-" but I'll leave it public for anyone else to use it
+" but I'll leave it as public for anyone else to use it
 
 set nocompatible                       " vim functionality
 filetype off

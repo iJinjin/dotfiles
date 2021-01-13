@@ -10,15 +10,19 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'itchyny/lightline.vim'         " status line plugin
-Plugin 'tomasr/molokai'                " molokai theme
-Plugin 'mg979/vim-visual-multi'        " Multiline vim plugin
-Plugin 'preservim/nerdtree'            " file exploration plugin
-Plugin 'ycm-core/YouCompleteMe'        " autocompletion plugin
-Plugin 'cohama/lexima.vim'             " parenthesis autofill plugin
-Plugin 'ctrlpvim/ctrlp.vim'            " fuzzy search plugin
-Plugin 'vim-syntastic/syntastic'       " lint-like syntax checker plugin
-Plugin 'tpope/vim-fugitive'            " git plugin
+Plugin 'Yggdroot/indentLine'              " line indentation plugin
+Plugin 'vim-airline/vim-airline'          " status bar plugin
+Plugin 'vim-airline/vim-airline-themes'   " status bar themes
+Plugin 'sheerun/vim-polyglot'             " language syntax plugin
+Plugin 'ryanoasis/vim-devicons'           " icons for vim
+Plugin 'tomasr/molokai'                   " molokai theme
+Plugin 'mg979/vim-visual-multi'           " Multiline vim plugin
+Plugin 'preservim/nerdtree'               " file exploration plugin
+Plugin 'cohama/lexima.vim'                " parenthesis autofill plugin
+Plugin 'junegunn/fzf'                     " fuzzy finder plugin
+Plugin 'junegunn/fzf.vim'                 " fzf vim extension
+Plugin 'vim-syntastic/syntastic'          " lint-like syntax checker plugin
+Plugin 'tpope/vim-fugitive'               " git plugin
 
 call vundle#end()
 filetype plugin indent on
@@ -70,10 +74,14 @@ set mouse+=a           " enable mouse support
 
 " used for kite
 set completeopt+=menuone
-set completeopt+=noinsert
-set completeopt-=longest
+set completeopt+=noselect
+set completeopt+=preview
+autocmd CompleteDone * if !pumvisible() | pclose | endif
+
 set belloff+=ctrlg
 
+" new windows go below
+set splitbelow
 
 " disable Ex mode
 nmap Q <Nop>
@@ -81,17 +89,29 @@ nmap Q <Nop>
 colo molokai           " use the molokai theme
 syntax on 
 
+" autocommands for custom vim environment on startup (don't use on neovim)
+" autocmd VimEnter * term
+" autocmd VimEnter * NERDTree
+
+" map fzf file search to Ctrl+P
+nmap <C-p> :Files<CR>
+
 " map nerdtree to Ctrl+O
 map <C-o> :NERDTreeToggle<CR>   
 
-" Some other stuff
+" easier split pane navigation (conflicts with kite snippets)
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
 
-let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ }
+" additional options for vim plugins
 
 let g:molokai_original = 1
-
-let g:ycm_clangd_binary_path = "/usr/bin/clangd-10"
+let g:airline_theme='wombat'
+let g:airline_powerline_fonts=1     " requires powerline font
 
 let g:kite_supported_languages = ['*']
+let g:kite_tab_complete=1
+
+let g:indentLine_char = '┊'

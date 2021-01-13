@@ -23,6 +23,7 @@ Plugin 'junegunn/fzf'                     " fuzzy finder plugin
 Plugin 'junegunn/fzf.vim'                 " fzf vim extension
 Plugin 'vim-syntastic/syntastic'          " lint-like syntax checker plugin
 Plugin 'tpope/vim-fugitive'               " git plugin
+Plugin 'joshdick/onedark.vim'             " onedark theme plugin
 
 call vundle#end()
 filetype plugin indent on
@@ -42,6 +43,7 @@ set shortmess+=I       " disable default Vim startup message
 set enc=utf-8          " set UTF-8 encoding
 set fenc=utf-8
 set termencoding=utf-8
+set termguicolors      " terminal GUI colors
 
 set autoindent         " use indentation of previous line
 set smartindent        " intelligent indentation for C
@@ -86,8 +88,18 @@ set splitbelow
 " disable Ex mode
 nmap Q <Nop>
 
-colo molokai           " use the molokai theme
-syntax on 
+" onedark overrides
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+  augroup END
+endif
+
+" colorscheme
+syntax on
+colorscheme onedark
 
 " autocommands for custom vim environment on startup (don't use on neovim)
 " autocmd VimEnter * term
@@ -106,9 +118,9 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
 " additional options for vim plugins
+let g:onedark_termcolors=256
 
-let g:molokai_original = 1
-let g:airline_theme='wombat'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1     " requires powerline font
 
 let g:kite_supported_languages = ['*']

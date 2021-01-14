@@ -12,8 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Yggdroot/indentLine'              " line indentation plugin
 Plugin 'vim-airline/vim-airline'          " status bar plugin
+Plugin 'bling/vim-bufferline'             " buffer line plugin
 Plugin 'vim-airline/vim-airline-themes'   " status bar themes
-Plugin 'sheerun/vim-polyglot'             " language syntax plugin
 Plugin 'ryanoasis/vim-devicons'           " icons for vim
 Plugin 'tomasr/molokai'                   " molokai theme
 Plugin 'mg979/vim-visual-multi'           " Multiline vim plugin
@@ -98,6 +98,10 @@ if (has("autocmd") && !has("gui_running"))
     autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
   augroup END
 endif
+
+" assembly syntax highlighting
+let asmsyntax = 'nasm'
+" au BufRead,BufNewFile *.asm set filetype=nasm
 
 " colorscheme
 syntax on

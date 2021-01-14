@@ -23,6 +23,8 @@ Plugin 'junegunn/fzf'                     " fuzzy finder plugin
 Plugin 'junegunn/fzf.vim'                 " fzf vim extension
 Plugin 'vim-syntastic/syntastic'          " lint-like syntax checker plugin
 Plugin 'tpope/vim-fugitive'               " git plugin
+Plugin 'tpope/vim-commentary'             " commenting plugin
+Plugin 'tpope/vim-unimpaired'             " some useful keybinding plugin
 Plugin 'joshdick/onedark.vim'             " onedark theme plugin
 
 call vundle#end()
@@ -119,6 +121,15 @@ nnoremap <C-h> <C-w><C-h>
 
 " additional options for vim plugins
 let g:onedark_termcolors=256
+
+" VM options for proper highlighting
+
+let g:VM_Mono_hl   = 'DiffText'
+let g:VM_Extend_hl = 'DiffAdd'
+let g:VM_Cursor_hl = 'Visual'
+let g:VM_Insert_hl = 'DiffChange'
+
+let g:VMTheme='nord'
 
 let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1     " requires powerline font

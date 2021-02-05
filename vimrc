@@ -25,6 +25,7 @@ Plugin 'vim-syntastic/syntastic'          " lint-like syntax checker plugin
 Plugin 'tpope/vim-fugitive'               " git plugin
 Plugin 'tpope/vim-commentary'             " commenting plugin
 Plugin 'tpope/vim-unimpaired'             " some useful keybinding plugin
+Plugin 'tpope/vim-surround'               " surrounding plugin
 Plugin 'joshdick/onedark.vim'             " onedark theme plugin
 
 call vundle#end()
@@ -89,6 +90,9 @@ set splitbelow
 
 " disable Ex mode
 nmap Q <Nop>
+
+" active file remap
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " onedark overrides
 if (has("autocmd") && !has("gui_running"))

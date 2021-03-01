@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jinjin/.oh-my-zsh"
+export ZSH="/home/jinjin/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -81,6 +81,7 @@ plugins=(
     git 
     zsh-autosuggestions
     autojump
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -113,8 +114,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Jinjin Configs
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export PATH=/usr/local/opt/llvm/bin:$PATH
 
 alias vim="nvim"

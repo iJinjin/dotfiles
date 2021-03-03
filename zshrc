@@ -21,7 +21,12 @@ export ZSH="/home/jinjin/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#616161"
+# Autosuggest highlights
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
+else
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#616161"
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

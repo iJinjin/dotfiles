@@ -21,6 +21,6 @@ import splitmind
 ).build(nobanner=True)
 end
 
-set context-code-lines 10
+set context-code-lines 20
 set context-source-code-lines 10
 set context-sections "regs args code disasm stack backtrace"

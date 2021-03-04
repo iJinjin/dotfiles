@@ -11,7 +11,8 @@ DIR_BACKUP=~/dotfiles_backup     # backup dotfiles directory
 files="vimrc 
        bashrc 
        bash_aliases
-       zshrc"            
+       zshrc
+       gdbinit"            
 
 # create a backup directory for old dotfiles if not present
 if [ ! -d "$DIR_BACKUP" ]; then

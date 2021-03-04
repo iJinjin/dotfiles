@@ -18,3 +18,7 @@ Make `~/.config/nvim/init/vim`
 
 ### zsh
 Need to install oh-my-zsh and some additional steps
+
+### gdbinit
+This is used for pwndbg extension of GDB
+pwndbg and splitmind install required

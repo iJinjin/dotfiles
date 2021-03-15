@@ -13,7 +13,7 @@ fi
 export LS_COLORS="$(vivid generate ~/dotfiles/one-dark.yml)"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/jinjin/.oh-my-zsh"
+export ZSH="/Users/jinjin/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -127,6 +127,12 @@ export PATH=/usr/local/opt/llvm/bin:$PATH
 
 alias vim="nvim"
 alias vi="nvim"
+
+case `uname` in
+    Darwin)
+        alias ls="gls --color"
+    ;;
+esac
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

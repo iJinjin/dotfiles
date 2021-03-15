@@ -13,7 +13,14 @@ fi
 export LS_COLORS="$(vivid generate ~/dotfiles/one-dark.yml)"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jinjin/.oh-my-zsh"
+case `uname` in
+    Darwin)
+        export ZSH="/Users/jinjin/.oh-my-zsh"
+    ;;
+    Linux)
+        export ZSH="/home/jinjin/.oh-my-zsh" 
+    ;;
+esac
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

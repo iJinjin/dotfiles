@@ -21,7 +21,6 @@ Plugin 'preservim/nerdtree'               " file exploration plugin
 Plugin 'cohama/lexima.vim'                " parenthesis autofill plugin
 Plugin 'junegunn/fzf'                     " fuzzy finder plugin
 Plugin 'junegunn/fzf.vim'                 " fzf vim extension
-Plugin 'vim-syntastic/syntastic'          " lint-like syntax checker plugin
 Plugin 'tpope/vim-fugitive'               " git plugin
 Plugin 'tpope/vim-commentary'             " commenting plugin
 Plugin 'tpope/vim-unimpaired'             " some useful keybinding plugin

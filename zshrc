@@ -15,10 +15,10 @@ export LS_COLORS="$(vivid generate ~/dotfiles/one-dark.yml)"
 # Path to your oh-my-zsh installation.
 case `uname` in
     Darwin)
-        export ZSH="/Users/jinjin/.oh-my-zsh"
+        export ZSH="$HOME/.oh-my-zsh"
     ;;
     Linux)
-        export ZSH="/home/jinjin/.oh-my-zsh" 
+        export ZSH="$HOME/.oh-my-zsh" 
     ;;
 esac
 

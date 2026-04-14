@@ -76,12 +76,6 @@ set laststatus=2       " for proper plugin functioning/show status line at botto
 
 set mouse+=a           " enable mouse support
 
-" used for kite
-set completeopt+=menuone
-set completeopt+=noselect
-set completeopt+=preview
-autocmd CompleteDone * if !pumvisible() | pclose | endif
-
 set belloff+=ctrlg
 
 " new windows go below
@@ -140,8 +134,5 @@ let g:VMTheme='nord'
 
 let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1     " requires powerline font
-
-let g:kite_supported_languages = ['*']
-let g:kite_tab_complete=1
 
 let g:indentLine_char = '┊'

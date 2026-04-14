@@ -124,3 +124,6 @@ fi
 # enable bash timestamps
 export PROMPT_COMMAND="echo -n \[\$(date +%H:%M:%S)\]\ "
 
+. "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
